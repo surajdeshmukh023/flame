@@ -42,11 +42,14 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 curl https://pyenv.run | bash
 
 # pyenv
+#Add the following entries into your ~/.bashrc or ~/.bash_profile file:
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
-
+#restart the shell
 exec $SHELL
+#OR source the shell
+source ~/.bashrc  source ~/.bash_profile
 
 pyenv install 3.9.6
 pyenv global 3.9.6
